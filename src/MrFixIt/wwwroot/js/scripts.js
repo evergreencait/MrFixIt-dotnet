@@ -19,10 +19,25 @@ $(document).ready(function () {
         $.ajax({
             type: 'GET',
             datatype: 'html',
-            url: 'Jobs/Update',
+            url: 'Jobs/Edit',
             success: function (result) {
                 $('.update').html(result);
 
+            }
+        });
+    });
+
+    $('.complete-job').submit(function (event) {
+        event.preventDefault();
+        $.ajax({
+            url: 'Job/Edit',
+            type: 'POST',
+            dataType: 'json',
+            data: $(this).serialize(),
+            success: function (result) {
+                var editedJob = result.Title;
+                var jobId = result.id.toString();
+                $('#' + jobId).text(editedJob);
             }
         });
     });
