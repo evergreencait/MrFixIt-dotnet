@@ -13,8 +13,8 @@ $(document).ready(function () {
             }
         });
     });
+    //works to show update view with buttons to update status of job
     $('.update-status').click(function () {
-        alert("this works!");
         $.ajax({
             type: 'GET',
             datatype: 'html',

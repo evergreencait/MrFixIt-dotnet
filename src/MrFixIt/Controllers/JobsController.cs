@@ -48,6 +48,7 @@ namespace MrFixIt.Controllers
             return RedirectToAction("Index");
         }
 
+        //Shows page that contains buttons to update status of job
         public IActionResult Update(int id)
         {
             var thisItem = db.Jobs.FirstOrDefault(items => items.JobId == id);
