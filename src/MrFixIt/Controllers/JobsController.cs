@@ -54,5 +54,14 @@ namespace MrFixIt.Controllers
             var thisItem = db.Jobs.FirstOrDefault(items => items.JobId == id);
             return View(thisItem);
         }
+
+        [HttpPost, ActionName("Update")]
+        public IActionResult UpdateConfirmed(int id)
+        {
+            var thisJob = db.Jobs.FirstOrDefault(jobs => jobs.JobId == id);
+            db.Jobs.Remove(thisJob);
+            db.SaveChanges();
+            return Json(thisJob);
+        }
     }
 }

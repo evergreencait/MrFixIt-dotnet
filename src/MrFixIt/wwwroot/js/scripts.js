@@ -21,6 +21,19 @@ $(document).ready(function () {
             url: 'Jobs/Update',
             success: function (result) {
                 $('.update').html(result);
+                $('.complete-job').click(function () {
+                    console.log("Hello");
+                    $.ajax({
+                        type: 'POST',
+                        url: 'Jobs/Update/' + this.value,
+                        success: function (result) {
+                            console.log(result);
+                            var JobId = result.jobId;
+                            $('#' + JobId).remove();
+                        }
+                    });
+                });
+
             }
         });
     });
