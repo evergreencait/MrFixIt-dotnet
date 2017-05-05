@@ -1,0 +1,9 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Update";
+}
+
+<button type="submit" id="pending-button" class="btn btn-primary" value="@Model.JobId">Pending</button>
+<button type="submit" id="complete-button" class="btn btn-danger" value="@Model.JobId">Complete</button>
