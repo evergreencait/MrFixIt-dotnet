@@ -16,10 +16,11 @@
         </ul>
         @if (Job.Worker == null)
         {
-        <li class="claim-job" id="@Job.Title">This job is unclaimed.</li>
-            }
-            else
-            {
+        <li class="claim-job" id="@Job.Title" value="@Job.JobId">This job is unclaimed.</li>
+        <div class="claim"></div>
+        }
+        else
+        {
             <li class="btn">This Job is claimed by @Job.Worker.FirstName @Job.Worker.LastName</li>
 
             }
@@ -28,6 +29,6 @@
 
             <hr />
 
-            <div class="claim"></div>
+            
             }
 
