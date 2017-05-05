@@ -13,13 +13,12 @@ $(document).ready(function () {
             }
         });
     });
-
-    //works to use ajax to show update page
     $('.update-status').click(function () {
+        alert("this works!");
         $.ajax({
             type: 'GET',
             datatype: 'html',
-            url: '/Jobs/update/' + this.value,
+            url: 'Jobs/Update',
             success: function (result) {
                 $('.update').html(result);
             }
