@@ -13,4 +13,16 @@ $(document).ready(function () {
             }
         });
     });
+
+    //works to use ajax to show update page
+    $('.update-status').click(function () {
+        $.ajax({
+            type: 'GET',
+            datatype: 'html',
+            url: '/Jobs/update/' + this.value,
+            success: function (result) {
+                $('.update').html(result);
+            }
+        });
+    });
 });

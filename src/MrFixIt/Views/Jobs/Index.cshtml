@@ -24,7 +24,8 @@
         {
             <li class="btn">This Job is claimed by @Job.Worker.FirstName @Job.Worker.LastName</li>
             //Allows user to click on update status and see drop down for pending or complete
-            <p class="update-status">Update Status</p>
+            <p class="update-status" value="@Job.JobId">Update Status</p>
+            <div class="update"></div>
 
         }
 
