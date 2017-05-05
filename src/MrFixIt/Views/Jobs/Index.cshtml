@@ -10,23 +10,23 @@
 @foreach (var Job in Model)
 {
    
-        <li>@Job.Title</li>
-        <ul>
-            <li>@Job.Description</li>
-        </ul>
+        <h1>@Job.Title</h1>
+        
+            <h3>@Job.Description</h3>
+        
         @if (Job.Worker == null)
         {
-        <li class="claim-job" id="@Job.Title" value="@Job.JobId">This job is unclaimed.</li>
+        <p class="claim-job" id="@Job.Title" value="@Job.JobId">Claim it</p>
         <div class="claim"></div>
         }
         else
         {
-            <li class="btn">This Job is claimed by @Job.Worker.FirstName @Job.Worker.LastName</li>
+            <p class="btn">This Job is claimed by @Job.Worker.FirstName @Job.Worker.LastName</p>
 
             }
 
 
-    <li class="update-status">Update Status</li>
+    <button class="update-status">Update Status</button>
     <div class="update"></div>
             <hr />
 
