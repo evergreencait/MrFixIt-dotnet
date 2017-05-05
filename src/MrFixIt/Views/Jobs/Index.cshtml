@@ -16,6 +16,7 @@
         </ul>
         @if (Job.Worker == null)
         {
+            //allows user to click on name of job and claim it with AJAX
         <li class="claim-job" id="@Job.Title" value="@Job.JobId">This job is unclaimed.</li>
         <div class="claim"></div>
         }
@@ -23,7 +24,20 @@
         {
             <li class="btn">This Job is claimed by @Job.Worker.FirstName @Job.Worker.LastName</li>
 
-            }
+        }
+    
+
+    //Able to see if job is pending or complete on index page.
+    @if (Job.Completed == true)
+    {
+        <p>This job is complete</p>
+
+    }
+    else
+    {
+        <p>This job is pending</p>
+
+    }
 
 
 
