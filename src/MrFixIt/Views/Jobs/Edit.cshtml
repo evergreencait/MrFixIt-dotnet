@@ -4,17 +4,18 @@
 }
 
 @model MrFixIt.Models.Job
+<h4>Update the status: @Html.DisplayFor(model => model.Title)</h4>
 
-@*<form action="Edit" class="complete-job">
-    <input type="hidden" name="id" value="@Model.JobId">
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.JobId)
 
-    <label for="newComplete">Complete:</label>
-    <input type="text" name="newComplete" value="@Model.Completed" />
-    <br />
-    <label for="newPending"> Pending:</label>
-    <input type="text" name="newPending" value="@Model.Pending" />
-    <br />
-    <button type="submit">Update Status</button>
-</form>*@
+    @Html.LabelFor(model => model.Completed)
+    @Html.EditorFor(model => model.Completed)
 
-<p>form for updating status will go here</p>
+    @Html.LabelFor(model => model.Pending)
+    @Html.EditorFor(model => model.Pending)
+
+
+    <input type="submit" value="Save" class="btn btn-default" />
+}
