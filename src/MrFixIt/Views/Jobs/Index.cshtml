@@ -23,9 +23,11 @@
         else
         {
             <li class="btn">This Job is claimed by @Job.Worker.FirstName @Job.Worker.LastName</li>
+            //Allows user to click on update status and see drop down for pending or complete
+            <p class="update-status">Update Status</p>
 
         }
-    
+
 
     //Able to see if job is pending or complete on index page.
     @if (Job.Completed == true)
