@@ -14,20 +14,21 @@ $(document).ready(function () {
         });
     });
     //works to show update view with buttons to update status of job
-    $('.update-status').click(function () {
+    $('.update-complete').click(function () {
+        alert("this works");
         $.ajax({
             type: 'GET',
             datatype: 'html',
             url: 'Jobs/Edit',
             success: function (result) {
                 $('.update').html(result);
-                $('.pending-job').click(function () {
-                    alert("this works");
-                    Job.Pending = true;
-                });
-                $('.complete-job').click(function () {
-                    Job.Complete = true;
-                });
+                //$('.pending-job').click(function () {
+                //    alert("this works");
+                //    Job.Pending = true;
+                //});
+                //$('.complete-job').click(function () {
+                //    Job.Complete = true;
+                //});
             }
         });
     });
