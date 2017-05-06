@@ -1,21 +1,13 @@
-﻿@{
-    ViewData["Title"] = "Edit";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
 }
-
 @model MrFixIt.Models.Job
-<h4>Update the status: @Html.DisplayFor(model => model.Title)</h4>
 
-@using (Html.BeginForm())
-{
-    @Html.HiddenFor(model => model.JobId)
-
-    @Html.LabelFor(model => model.Completed)
-    @Html.EditorFor(model => model.Completed)
-
-    @Html.LabelFor(model => model.Pending)
-    @Html.EditorFor(model => model.Pending)
+<button class="pending-job btn btn-primary">Pending</button>
+<button class="complete-job btn btn-danger">Complete</button>
 
 
-    <input type="submit" value="Save" class="btn btn-default" />
-}
+
+

@@ -22,11 +22,22 @@
         else
         {
             <p class="btn">This Job is claimed by @Job.Worker.FirstName @Job.Worker.LastName</p>
+            @if (Job.Completed == false)
+            {
+                <p>This job is still pending</p>
+
+            }
+            else
+            {
+                <p>This job has been completed!</p>
 
             }
 
+        }
 
-    <button class="update-status">Update Status</button>
+
+    <button class="update-status" value="@Job.JobId">Update Status</button>
+    <hr />
     <div class="update"></div>
             <hr />
 
