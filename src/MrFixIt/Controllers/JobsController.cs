@@ -49,7 +49,13 @@ namespace MrFixIt.Controllers
         }
 
         //Shows page that contains buttons to update status of job
-        public IActionResult Edit(int id)
+        public IActionResult Complete(int id)
+        {
+            var thisItem = db.Jobs.FirstOrDefault(items => items.JobId == id);
+            return View(thisItem);
+        }
+
+        public IActionResult Pending(int id)
         {
             var thisItem = db.Jobs.FirstOrDefault(items => items.JobId == id);
             return View(thisItem);

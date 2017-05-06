@@ -19,16 +19,23 @@ $(document).ready(function () {
         $.ajax({
             type: 'GET',
             datatype: 'html',
-            url: 'Jobs/Edit',
+            url: 'Jobs/Complete',
             success: function (result) {
                 $('.update').html(result);
-                //$('.pending-job').click(function () {
-                //    alert("this works");
-                //    Job.Pending = true;
-                //});
-                //$('.complete-job').click(function () {
-                //    Job.Complete = true;
-                //});
+                db.Job.Complete = true;
+            }
+        });
+    });
+
+    $('.update-pending').click(function () {
+        alert("this works");
+        $.ajax({
+            type: 'GET',
+            datatype: 'html',
+            url: 'Jobs/Pending',
+            success: function (result) {
+                $('.update').html(result);
+                db.Job.Complete = true;
             }
         });
     });
