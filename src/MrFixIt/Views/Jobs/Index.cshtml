@@ -16,22 +16,24 @@
         
         @if (Job.Worker == null)
         {
-        <p class="claim-job" id="@Job.Title" value="@Job.JobId">Claim it</p>
+        <button class="claim-job" id="@Job.Title" value="@Job.JobId">Claim it</button>
         <div class="claim"></div>
         }
         else
         {
             <p class="btn">This Job is claimed by @Job.Worker.FirstName @Job.Worker.LastName</p>
-            @if (Job.Completed == false)
+            //This displays whether the job is completed or not when status is changed by button
+            @if (Job.Completed == true)
             {
-                <p>This job is still pending</p>
+                <p>This job is complete</p>
 
             }
-            else
+            else if (Job.Pending == true)
             {
-                <p>This job has been completed!</p>
+                <p>This job is still pending.</p>
 
             }
+ 
 
         }
 

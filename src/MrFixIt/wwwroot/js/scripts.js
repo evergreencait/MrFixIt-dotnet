@@ -20,7 +20,14 @@ $(document).ready(function () {
             datatype: 'html',
             url: 'Jobs/Edit',
             success: function (result) {
-                $('.update').html(result)
+                $('.update').html(result);
+                $('.pending-job').click(function () {
+                    alert("this works");
+                    Job.Pending = true;
+                });
+                $('.complete-job').click(function () {
+                    Job.Complete = true;
+                });
             }
         });
     });
