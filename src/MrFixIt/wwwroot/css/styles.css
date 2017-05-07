@@ -2,3 +2,17 @@
     padding-top: 70px;
     color: navy;
 }
+
+.comp, .pen {
+    margin-top: 20px;
+    border: 4px solid #d9534f;
+    background-color: #d9534f;
+    width: 200px;
+    color: white;
+    padding-top: 2px;
+}
+
+.check {
+    height: 20px;
+    margin-right: 10px;
+}
