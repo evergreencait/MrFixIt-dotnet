@@ -13,7 +13,7 @@ $(document).ready(function () {
             }
         });
     });
-    //works to show update view with buttons to update status of job
+    //works to display complete page with confirmation
     $('.complete-job').click(function () {
         alert("this works");
         $.ajax({
@@ -26,14 +26,14 @@ $(document).ready(function () {
         });
     });
 
-    $('.update-pending').click(function () {
-        alert("this works");
+    $('.pending-job').click(function () {
+        alert("this works too");
         $.ajax({
-            url: 'Jobs/Pending',
+            url: 'Jobs/Pending/' + this.value,
             type: 'GET',
             datatype: 'html',
             success: function (result) {
-                $('.update').html(result);
+                $('.pending').html(result);
             }
         });
     });
