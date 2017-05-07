@@ -3,7 +3,7 @@
     color: navy;
 }
 
-.comp, .pen {
+.comp {
     margin-top: 20px;
     border: 4px solid #d9534f;
     background-color: #d9534f;
@@ -11,6 +11,16 @@
     color: white;
     padding-top: 2px;
 }
+
+.pen {
+   margin-top: 20px;
+    border: 4px solid #428bca;
+    background-color: #428bca;
+    width: 200px;
+    color: white;
+    padding-top: 2px;
+}
+
 
 .check {
     height: 20px;
