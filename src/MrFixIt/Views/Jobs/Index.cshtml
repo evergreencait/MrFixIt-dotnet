@@ -4,23 +4,27 @@
 @{
 }
 
-<div class="text-center">
-    <h3>Our Current Jobs</h3>
-    @Html.ActionLink("Add a new job", "Create")
-</div>
-@foreach (var Job in Model)
-{
-   
+<div class="back">
+
+    <img class="scr" src="http://2.bp.blogspot.com/-llNL5zbYgRQ/UBlMAls8LJI/AAAAAAAAAZQ/gzk6RAJlzMA/s1600/hammerscrewdriver.jpg" alt="screwdriver" />
+
+    <div class="text-center">
+        <h3>Our Current Jobs</h3>
+        @Html.ActionLink("Add a new job", "Create")
+    </div>
+    @foreach (var Job in Model)
+    {
+
         <h1>@Job.Title</h1>
-        
-            <h3>@Job.Description</h3>
 
-    //Shows the claim button if there isn't a worker attached
+        <h3>@Job.Description</h3>
 
-    @if (Job.Worker == null)
+        //Shows the claim button if there isn't a worker attached
+
+        @if (Job.Worker == null)
         {
-        <button class="claim-job" id="@Job.Title" value="@Job.JobId">Claim it</button>
-        <div class="claim"></div>
+            <button class="claim-job" id="@Job.Title" value="@Job.JobId">Claim it</button>
+            <div class="claim"></div>
         }
         else
         {
@@ -32,24 +36,35 @@
         }
 
 
-    //This displays whether the job is completed or not when status is changed by button
-            @if (Job.Completed == true)
-            {
-                <div class="comp"><img class="check" src="http://www.clipartbest.com/cliparts/ace/odo/aceodo4Mi.png" />This job is complete</div>
 
-            }
-            else if (Job.Pending == true)
-            {
-                <div class="pen"><img class="check" src="https://d30y9cdsu7xlg0.cloudfront.net/png/99629-200.png" />This job is still pending.</div>
+        //This displays whether the job is completed or not when status is changed by button
+        @if (Job.Completed == true)
+        {
+            <div class="comp"><img class="check" src="http://www.clipartbest.com/cliparts/ace/odo/aceodo4Mi.png" />This job is complete</div>
 
-            }
- 
+        }
+        else if (Job.Pending == true)
+        {
+            <div class="pen"><img class="check" src="https://d30y9cdsu7xlg0.cloudfront.net/png/99629-200.png" />This job is still pending.</div>
 
         }
 
 
-    
-            <hr />
+    }
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
 
 
 

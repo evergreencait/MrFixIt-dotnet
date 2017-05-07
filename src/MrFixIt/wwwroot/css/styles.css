@@ -55,3 +55,31 @@
     width: 500px;
     color: white;
 }
+
+a {
+    color: black;
+}
+
+.login 
+{
+    background-image: url("https://higherlogicdownload.s3.amazonaws.com/NSACCT/7e1b22bb-4736-47f7-a45d-41ce8d27e073/UploadedImages/bigstock-set-of-tools-in-tool-box-on-a--51238249.jpg");
+    height: 100vh;
+    background-size: cover;
+    -webkit-box-shadow: 1px 1px 28px 8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 28px 8px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 28px 8px rgba(0,0,0,0.75);
+}
+
+.scr {
+    height: 500px;
+    border-radius: 50%;
+    float: right;
+    margin-top: 10%;
+    margin-right: 15%;
+    border: 7px solid white;
+
+}
+
+.back {
+    background-color: #d3d3d3;
+}
