@@ -5,4 +5,11 @@
 }
 @model MrFixIt.Models.Job
 
-<p>You marked this job as active and pending.</p>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.JobId)
+    @Html.HiddenFor(model => model.Title)
+    @Html.HiddenFor(model => model.Description)
+
+    <input type="submit" value="Pending" />
+}

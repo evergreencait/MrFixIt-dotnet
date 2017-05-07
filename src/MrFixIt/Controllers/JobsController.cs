@@ -48,18 +48,23 @@ namespace MrFixIt.Controllers
             return RedirectToAction("Index");
         }
 
-        //Shows page that contains buttons to update status of job
         public IActionResult Complete(int id)
         {
             var thisItem = db.Jobs.FirstOrDefault(items => items.JobId == id);
             return View(thisItem);
         }
 
-        public IActionResult Pending(int id)
+        [HttpPost]
+        public IActionResult Complete(Job job)
         {
-            var thisItem = db.Jobs.FirstOrDefault(items => items.JobId == id);
-            return View(thisItem);
+            job.Completed = true;
+            db.Entry(job).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
+
+
+
 
     }
 }

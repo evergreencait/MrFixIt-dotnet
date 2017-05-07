@@ -3,6 +3,7 @@
 *@
 @{
 }
+
 <div class="text-center">
     <h3>Our Current Jobs</h3>
     @Html.ActionLink("Add a new job", "Create")
@@ -13,7 +14,7 @@
         <h1>@Job.Title</h1>
         
             <h3>@Job.Description</h3>
-        
+
         @if (Job.Worker == null)
         {
         <button class="claim-job" id="@Job.Title" value="@Job.JobId">Claim it</button>
@@ -22,7 +23,14 @@
         else
         {
             <p class="btn">This Job is claimed by @Job.Worker.FirstName @Job.Worker.LastName</p>
-            //This displays whether the job is completed or not when status is changed by button
+            <button class="complete-job" value="@Job.JobId">Complete</button>
+            <div class="complete"></div>
+            <button class="pending-job" value="@Job.JobId">Pending</button>
+            <div class="pending"></div>
+        }
+
+
+    //This displays whether the job is completed or not when status is changed by button
             @if (Job.Completed == true)
             {
                 <p>This job is complete</p>
@@ -38,12 +46,12 @@
         }
 
 
-    <button class="update-complete btn btn-danger" value="@Job.JobId">Complete</button>
-    <button class="update-pending btn btn-primary" value="@Job.JobId">Active</button>
-    <hr />
-    <div class="update"></div>
+    
             <hr />
 
-            
-            }
+}
+
+
+
+
 

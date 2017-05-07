@@ -14,15 +14,14 @@ $(document).ready(function () {
         });
     });
     //works to show update view with buttons to update status of job
-    $('.update-complete').click(function () {
+    $('.complete-job').click(function () {
         alert("this works");
         $.ajax({
             type: 'GET',
             datatype: 'html',
-            url: 'Jobs/Complete',
+            url: '/Jobs/Complete/' + this.value,
             success: function (result) {
-                $('.update').html(result);
-                db.Job.Complete = true;
+                $('.complete').html(result);
             }
         });
     });
@@ -30,12 +29,11 @@ $(document).ready(function () {
     $('.update-pending').click(function () {
         alert("this works");
         $.ajax({
+            url: 'Jobs/Pending',
             type: 'GET',
             datatype: 'html',
-            url: 'Jobs/Pending',
             success: function (result) {
                 $('.update').html(result);
-                db.Job.Complete = true;
             }
         });
     });

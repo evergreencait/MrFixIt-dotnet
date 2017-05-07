@@ -5,7 +5,15 @@
 }
 @model MrFixIt.Models.Job
 
-<p>You marked this job as complete.</p>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.JobId)
+    @Html.HiddenFor(model => model.Title)
+    @Html.HiddenFor(model => model.Description)
+
+    <input type="submit" value="Complete" />
+
+}
 
 
 
