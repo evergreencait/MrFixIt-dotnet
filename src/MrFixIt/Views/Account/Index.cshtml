@@ -5,19 +5,24 @@
     ViewBag.Title = "Register";
 }
 
-@using System.Security.Claims
+<div class="landing">
+    @using System.Security.Claims
 
-<h2>Mr. Fix-It</h2>
-<hr />
-@if (User.Identity.IsAuthenticated)
-{
-    <h4>Hello @User.Identity.Name!</h4>
+    
+    <h2 class="fix">Mr. Fix-It</h2>
+  
+    @if (User.Identity.IsAuthenticated)
+    {
+        <h4 class="welcome">Hello @User.Identity.Name!</h4>
 
-} else
-{
-    <p>@Html.ActionLink("Register", "Register")</p>
-    <p>@Html.ActionLink("Log in", "Login")</p>
-}
+    }
+    else
+    {
+        <p class="register">@Html.ActionLink("Register", "Register")</p>
+        <p class="register">@Html.ActionLink("Log in", "Login")</p>
+    }
+
+</div>
 
 
 

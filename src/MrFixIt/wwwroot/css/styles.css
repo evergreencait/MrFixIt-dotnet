@@ -26,3 +26,32 @@
     height: 20px;
     margin-right: 10px;
 }
+
+.landing {
+    background-image: url("https://higherlogicdownload.s3.amazonaws.com/NSACCT/7e1b22bb-4736-47f7-a45d-41ce8d27e073/UploadedImages/bigstock-set-of-tools-in-tool-box-on-a--51238249.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+   -webkit-box-shadow: 1px 1px 28px 8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 28px 8px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 28px 8px rgba(0,0,0,0.75);
+    color: black;
+}
+
+.fix {
+    font-family: 'Amatic SC', cursive;
+    font-size: 100px;
+    font-weight: bold;
+    color: teal;
+    border: 5px solid white;
+    background-color: white;
+}
+
+.welcome {
+    font-size: 30px;
+    margin-top: 80px;
+    border: 3px solid white;
+    background-color: gray;
+    width: 500px;
+    color: white;
+}

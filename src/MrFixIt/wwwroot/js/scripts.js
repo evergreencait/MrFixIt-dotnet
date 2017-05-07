@@ -15,7 +15,6 @@ $(document).ready(function () {
     });
     //works to display complete page with confirmation
     $('.complete-job').click(function () {
-        alert("this works");
         $.ajax({
             type: 'GET',
             datatype: 'html',
@@ -26,8 +25,8 @@ $(document).ready(function () {
         });
     });
 
+    //works to display pending page with confirmation
     $('.pending-job').click(function () {
-        alert("this works too");
         $.ajax({
             url: 'Jobs/Pending/' + this.value,
             type: 'GET',
@@ -37,4 +36,5 @@ $(document).ready(function () {
             }
         });
     });
+
 });

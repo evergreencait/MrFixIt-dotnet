@@ -15,7 +15,9 @@
         
             <h3>@Job.Description</h3>
 
-        @if (Job.Worker == null)
+    //Shows the claim button if there isn't a worker attached
+
+    @if (Job.Worker == null)
         {
         <button class="claim-job" id="@Job.Title" value="@Job.JobId">Claim it</button>
         <div class="claim"></div>

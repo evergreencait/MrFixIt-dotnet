@@ -5,6 +5,8 @@
 }
 @model MrFixIt.Models.Job
 
+@*Pending confirmation page that displays with AJAX when button is clicked on the index page*@
+
 @using (Html.BeginForm())
 {
     @Html.HiddenFor(model => model.JobId)
